@@ -1,0 +1,43 @@
+[general]
+	#Whether receivers may bind to transmitters in another dimension. | 是否允许接收端绑定到其他维度的发送端。
+	allowCrossDimensionTransmission = false
+	#When enabled, both endpoints must be loaded for the link to activate. | 启用后，链路两端都必须加载才会生效。
+	requireLoadedChunks = true
+
+[redstone]
+	#If true, redstone throttles transmitter output from full at signal 0 to stopped at signal 15. | 为 true 时，发送端会按红石强度调制输出：信号 0 为满输出，信号 15 为停止。
+	transmitterPoweredStops = true
+	#If true, redstone throttles receiver output from full at signal 0 to stopped at signal 15. | 为 true 时，接收端会按红石强度调制输出：信号 0 为满输出，信号 15 为停止。
+	receiverPoweredStops = true
+
+[balance]
+	#If true, a transmitter shuts down all attached receivers when the reserved budget exceeds supply. | 为 true 时，当预留应力超过供给时，发送端会关闭所有连接的接收端。
+	strictOverloadMode = true
+
+[limits]
+	#Maximum number of active links a single player may own. | 单个玩家最多可拥有的活动链路数量。
+	# Default: 64
+	# Range: 1 ~ 4096
+	maxLinksPerPlayer = 64
+	#Maximum number of receivers attached to one transmitter. | 单个发送端最多可连接的接收端数量。
+	# Default: 8
+	# Range: 1 ~ 256
+	maxReceiversPerTransmitter = 8
+	#Hard cap for one receiver's reserved SU budget. Use -1 for unlimited. | 单个接收端预留 SU 的硬上限，设为 -1 表示无限制。
+	# Default: 512
+	# Range: > -1
+	maxStressPerLink = 512
+	#Default reserved SU budget assigned to a new receiver. | 新接收端默认预留的 SU 预算。
+	# Default: 256
+	# Range: > 1
+	defaultRequestedStress = 256
+
+[server]
+	#Base interval for recomputing link state and stress budgets. Redstone control may use a faster interval. | 服务端重新计算链路状态和应力预算的基础间隔；红石控制可使用更快间隔。
+	# Default: 20
+	# Range: 1 ~ 200
+	evaluationIntervalTicks = 20
+	#When redstone throttling is enabled, links are recomputed at least this often. Use 1 for stable feedback builds. | 启用红石调速时，链路至少按此间隔重算；不倒翁等反馈结构建议为 1。
+	# Default: 1
+	# Range: 1 ~ 20
+	redstoneEvaluationIntervalTicks = 1
