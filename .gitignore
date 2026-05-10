@@ -39,3 +39,7 @@ antique_transport/
 .sable/
 .pg-native/
 .mixin.out/
+
+.probe
+debug/
+vista_ffmpeg_bin/

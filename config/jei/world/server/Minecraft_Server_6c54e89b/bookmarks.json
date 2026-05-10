@@ -1,0 +1,7 @@
+[
+  {"version":2},
+  {"recipe":"minecraft:comparator","recipeType":"minecraft:crafting","bookmarkType":"RECIPE"},
+  {"recipe":"minecraft:redstone_torch","recipeType":"minecraft:crafting","bookmarkType":"RECIPE"},
+  {"recipe":"minecraft:oak_planks","recipeType":"minecraft:crafting","bookmarkType":"RECIPE"},
+  {"recipe":"minecraft:chest","recipeType":"minecraft:crafting","bookmarkType":"RECIPE"}
+]

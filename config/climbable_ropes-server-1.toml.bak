@@ -36,3 +36,5 @@
 	allowPlungerClimbing = true
 	#Allow ziplining along plunger rope lines while holding a CHAIN_RIDEABLE-tagged item (e.g. Create's wrench), mirroring Simulated's existing zipline on hanging rope strands.
 	allowPlungerZipline = true
+	#Allow mantling onto the block above the rope when jumping off at its top end. When disabled, jumping off at the top performs a normal upward impulse instead.
+	allowBlockMantle = true
